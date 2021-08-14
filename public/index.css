@@ -1,0 +1,82 @@
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* Add some content at the bottom of the video/page */
+.background {
+  opacity: 0.2;
+}
+
+/* Style the button used to pause/play the video */
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+
+#video_overlays_left {
+  position: absolute;
+  float: left;
+  left: 0;
+  width: 100px;
+  min-height: 370px;
+  z-index: 300000;
+}
+
+#video_overlays_right {
+  position: absolute;
+  right: 0;
+  float: left;
+  width: 50px;
+  z-index: 300000;
+}
+
+.vertical-menu {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  /* Set a width if you like */
+}
+
+.vertical-menu a {
+  margin: auto;
+  background-color: none;
+  /* Grey background color */
+  color: red;
+  /* Black text color */
+  display: block;
+  /* Make the links appear below each other */
+  padding: 12px;
+  /* Add some padding */
+  text-decoration: none;
+  /* Remove underline from links */
+}
+
+.text-wrapping a {
+  -ms-transform: rotate(270deg);
+  /* IE 9 */
+  transform: rotate(270deg);
+  font-size: 15px;
+  white-space: nowrap;
+  height: 90px;
+}
+
+.vertical-menu a:hover {}
+
+.vertical-menu a.active {}
