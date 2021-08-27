@@ -33,26 +33,42 @@ html, body {
   color: black;
 }
 
-#video_overlays_left {
-  position: absolute;
-  float: left;
-  left: 0;
-  width: 100px;
-  min-height: 370px;
-  z-index: 300000;
+#Education {
+  visibility: hidden;
 }
 
-#video_overlays_right {
-  position: absolute;
+.video_overlays_left {
+  float: left;
+  left: 0;
+  min-height: 370px;
+  z-index: 300000;
+  border-style: solid;
+  flex-grow: 1;
+}
+
+.video_overlays_right {
   right: 0;
   float: left;
-  width: 50px;
   z-index: 300000;
+  border-style: solid;
+  flex-grow: 1;
+}
+
+.video_overlays_middle {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -100px;
+}
+
+.flex-container {
+  display: flex;
 }
 
 .vertical-menu {
   margin: 0;
-  position: absolute;
+  position: fixed;
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -85,3 +101,7 @@ html, body {
 .vertical-menu a:hover {}
 
 .vertical-menu a.active {}
+
+:root {
+  --animate-duration: 4s;
+}
