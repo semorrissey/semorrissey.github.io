@@ -48,6 +48,9 @@ function toggleVisibility(item) {
       break;
     }
   }
+  if (item.innerHTML === "Home") {
+    return
+  }
   //toggles visibility and adds temporary animations for each transistion
   if (document.getElementById(item.innerHTML).style.visibility === "visible") {
     document.getElementById(item.innerHTML).style.setProperty('--animate-duration', '0.5s');
