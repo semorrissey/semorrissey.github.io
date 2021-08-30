@@ -33,7 +33,7 @@ html, body {
   color: black;
 }
 
-#Education {
+#Education, #Projects, #Resume, #About, #Contact {
   visibility: hidden;
 }
 

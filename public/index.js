@@ -15,24 +15,49 @@ function myFunction() {
   }
 }
 
-/*this doesnt wokr because for some reason the boolean is only true or false not changing*/
+//function to toggle animation classes from animate.css
+const animateCSS = (element, animation, prefix = 'animate__') =>
+  // We create a Promise and return it
+  new Promise((resolve, reject) => {
+    const animationName = `${prefix}${animation}`;
+    const node = document.querySelector(element);
+
+    node.classList.add(`${prefix}animated`, animationName);
+
+    // When the animation ends, we clean the classes and resolve the Promise
+    function handleAnimationEnd(event) {
+      event.stopPropagation();
+      node.classList.remove(`${prefix}animated`, animationName);
+      resolve('Animation ended');
+    }
+
+    node.addEventListener('animationend', handleAnimationEnd, {
+      once: true
+    });
+  });
+
 function toggleVisibility(item) {
-  if ($('#' + item.innerHTML).is(":visible")) {
-    console.log("I hidden");
-    $('#' + item.innerHTML).css({
-      'visibility': 'hidden'
-    });
-  } else {
-    console.log($('#' + item.innerHTML).is(":visible"));
-    $('#' + item.innerHTML).css({
-      'visibility': 'visible'
-    });
+
+  const idArray = ['Education', 'Projects', 'Resume', 'About', 'Contact'];
+  for (var i = 0; i < idArray.length; i++) {
+    if (document.getElementById(idArray[i]).style.visibility === "visible") {
+      document.getElementById(idArray[i]).style.setProperty('--animate-duration', '0.5s');
+      animateCSS('#' + idArray[i], 'fadeOut').then((message) => {
+        document.getElementById(idArray[i]).style.visibility = "hidden";
+      });
+      break;
+    }
   }
-
-
-  /*  if (document.getElementById(item.innerHTML).style.visibility === "visible") {
+  //toggles visibility and adds temporary animations for each transistion
+  if (document.getElementById(item.innerHTML).style.visibility === "visible") {
+    document.getElementById(item.innerHTML).style.setProperty('--animate-duration', '0.5s');
+    animateCSS('#' + item.innerHTML, 'fadeOut').then((message) => {
       document.getElementById(item.innerHTML).style.visibility = "hidden";
-    } else {
-      document.getElementById(item.innerHTML).style.visibility = "visible";
-    }*/
+    });
+
+  } else {
+    document.getElementById(item.innerHTML).style.visibility = "visible";
+    document.getElementById(item.innerHTML).style.setProperty('--animate-duration', '0.5s');
+    animateCSS('#' + item.innerHTML, 'fadeIn');
+  }
 }
