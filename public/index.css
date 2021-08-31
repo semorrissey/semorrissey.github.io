@@ -4,6 +4,8 @@ html, body {
 
 .bodywrapper {
   overflow-x: hidden !important;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Style the video: 100% width and height to cover the entire window */
