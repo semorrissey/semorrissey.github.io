@@ -88,6 +88,10 @@ html, body {
   text-align: center;
 }
 
+.flex-container {
+  display: flex;
+}
+
 .vertical-menu {
   margin: 0;
   position: fixed;
