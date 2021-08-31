@@ -1,6 +1,9 @@
-html, body {
+html, body, div {
   max-width: 100%;
   overflow-x: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Style the video: 100% width and height to cover the entire window */
