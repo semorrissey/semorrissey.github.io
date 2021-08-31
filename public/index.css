@@ -1,6 +1,6 @@
-html, body {
-  max-width: 100% !important;
+.bodywrapper {
   overflow-x: hidden !important;
+  position: relative !important;
 }
 
 /* Style the video: 100% width and height to cover the entire window */
