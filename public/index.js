@@ -64,3 +64,8 @@ function toggleVisibility(item) {
     animateCSS('#' + item.innerHTML, 'fadeIn');
   }
 }
+
+
+$(function() {
+  $('[data-toggle="popover"]').popover()
+})

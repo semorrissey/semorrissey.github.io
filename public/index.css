@@ -1,11 +1,14 @@
 html, body {
-  overflow-x: hidden !important;
+  max-width: 100%;
+  max-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: none;
+  height: fit-content;
 }
 
-.bodywrapper {
-  overflow-x: hidden !important;
-  overflow: scroll;
-  -webkit-overflow-scrolling: touch;
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none;
 }
 
 /* Style the video: 100% width and height to cover the entire window */
@@ -42,12 +45,17 @@ html, body {
   visibility: hidden;
 }
 
-#Education h1 {
+#Education h1, #Resume h1, #Projects h1 {
   position: relative;
   top: 50%;
   left: 50%;
   margin-top: -50px;
   margin-left: -100px;
+}
+
+.titleP {
+  width: 50%;
+  margin: 0 auto;
 }
 
 .video_overlays_left {
@@ -69,20 +77,11 @@ html, body {
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -50px;
-  margin-left: -100px;
+  transform: translate(-50%, -50%);
 }
 
-#Education {
-  top: 25%;
-  left: 25%;
-  margin-top: -50px;
-  margin-left: -100px;
-}
-
-.group1, .group2 {
-  display: inline-block;
-  margin-left: 50px;
+#Projects {
+  width: 50%;
 }
 
 .footer {
@@ -150,4 +149,8 @@ html, body {
 
 :root {
   --animate-duration: 4s;
+}
+
+.card-columns {
+  display: inline-block;
 }
