@@ -2,7 +2,7 @@ html, body {
   max-width: 100%;
   max-height: 100%;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: hidden;
   scrollbar-width: none;
   height: fit-content;
 }
@@ -64,14 +64,6 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 
 #Resume {
   height: 75%;
-}
-
-#Education h1, #Resume h1, #Projects h1 {
-  position: static;
-  top: 50%;
-  left: 50%;
-  margin-top: -50px;
-  margin-left: -100px;
 }
 
 .video_overlays_left {
