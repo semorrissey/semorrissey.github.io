@@ -11,6 +11,23 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   display: none;
 }
 
+@media screen and (max-width:768px) {
+  img {
+    width: 100%;
+  }
+
+  .container {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .col-md-3 {
+    width: 100%;
+    float: left;
+    margin: 0;
+  }
+}
+
 /* Style the video: 100% width and height to cover the entire window */
 #myVideo {
   position: fixed;
