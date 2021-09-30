@@ -20,7 +20,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 @media only screen and (max-width: 600px) {
 
   /* (A) WRONG ORIENTATION - SHOW MESSAGE HIDE CONTENT */
-  @media only screen and (orientation:landscape) {
+  @media (orientation:landscape) {
     #turn {
       display: block;
     }
@@ -31,12 +31,12 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   }
 
   /* (B) CORRECT ORIENTATION - SHOW CONTENT HIDE MESSAGE */
-  @media only screen and (orientation:portrait) {
-    #turn, #video {
+  @media (orientation:portrait) {
+    #turn {
       display: none;
     }
 
-    .home, #start, #Education, #Projects, #Resume, #About, #Contact {
+    .home, #video, #start, #Education, #Projects, #Resume, #About, #Contact {
       display: block;
     }
   }
