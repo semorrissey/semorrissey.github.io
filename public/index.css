@@ -36,7 +36,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
       display: none;
     }
 
-    .home, #start, #video, #Education, #Projects, #Resume, #About, #Contact {
+    .home, #start, #Education, #Projects, #Resume, #About, #Contact {
       display: block;
     }
   }
@@ -107,7 +107,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  #turn {
+  #turn, #video {
     display: none;
   }
 
