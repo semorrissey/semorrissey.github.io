@@ -72,7 +72,7 @@ function startSequence() {
   startHeading.classList.remove("animate__infinite")
   animateCSS('#' + startHeading.id, 'fadeOut').then(() => {
     startHeading.style.visibility = "hidden";
-    document.getElementById("video").style.visibility = "visible";
+    document.getElementById("video").style.visibility = "hidden";
     document.getElementById("video").style.setProperty("--animate-duration", "0.5s");
     animateCSS("video", "fadeIn").then(() => {
       document.getElementById("video").onended = () => {
