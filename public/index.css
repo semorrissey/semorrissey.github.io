@@ -17,30 +17,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-
-  /* (A) WRONG ORIENTATION - SHOW MESSAGE HIDE CONTENT */
-  @media only screen and (orientation:landscape) {
-    #turn {
-      display: block;
-    }
-
-    .home, #start, #video, #Education, #Projects, #Resume, #About, #Contact {
-      display: none;
-    }
-  }
-
-  /* (B) CORRECT ORIENTATION - SHOW CONTENT HIDE MESSAGE */
-  @media only screen and (orientation:portrait) {
-    #turn, #video {
-      display: none;
-    }
-
-    .home, #start, #Education, #Projects, #Resume, #About, #Contact {
-      display: block;
-    }
-  }
-}
+@media only screen and (max-width: 600px) {}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
