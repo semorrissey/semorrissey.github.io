@@ -72,18 +72,19 @@ function startSequence() {
   startHeading.classList.remove("animate__infinite")
   animateCSS('#' + startHeading.id, 'fadeOut').then(() => {
     startHeading.style.visibility = "hidden";
-    document.getElementById("video").style.visibility = "visible";
+    document.getElementById("video").style.visibility = "hidden";
     document.getElementById("video").style.setProperty("--animate-duration", "0.5s");
     animateCSS("video", "fadeIn").then(() => {
       document.getElementById("video").onended = () => {
-        for (var i = 0; i < startObjects.length; i++) {
-          document.getElementById(startObjects[i].id).style.visibility = "visible";
-          document.getElementById(startObjects[i].id).style.setProperty('--animate-duration', '5.0s');
-          animateCSS('#' + startObjects[i].id, 'fadeIn');
-          continue;
-        }
+
         document.getElementById("video").style.visibility = "hidden";
       };
+      for (var i = 0; i < startObjects.length; i++) {
+        document.getElementById(startObjects[i].id).style.visibility = "visible";
+        document.getElementById(startObjects[i].id).style.setProperty('--animate-duration', '5.0s');
+        animateCSS('#' + startObjects[i].id, 'fadeIn');
+        continue;
+      }
       document.getElementById("video").play();
     })
 
