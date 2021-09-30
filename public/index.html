@@ -65,45 +65,6 @@
       </div>
     </div>
     <br>
-    <!--
-    <div class="row row-cols-1 row-cols-md-2 g-4">
-      <div class="col">
-        <div class="card">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-        </div>
-      </div>
-    </div>-->
 
     <div class="row">
       <div class="col-sm-6 d-flex align-items-stretch">
@@ -219,11 +180,37 @@
   </div>
 
   <div id="Contact" class=" container video_overlays_middle">
-    <h1>This part is a Work In Progress</h1>
-    <p>this portion will be finished very soon, please enjoy other portions of the website for the time being. Check back soon!</p>
+
+    <div class="row justify-content-md-center">
+
+      <div class="col-md-auto">
+        <h1> Contact Me </h1>
+      </div>
+
+    </div>
+    <br>
+    <div class="row justify-content-md-center">
+      <div class="col-md-auto">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="..." class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Contact Information</h5>
+                <p class="card-text  align-items-stretch">School: <a href="mailto:semorrissey@wpi.edu">semorrissey@wpi.edu</a></p>
+                <p class="card-text  align-items-stretch">Personal: <a href="mailto:semorrissey17@gmail.com">semorrissey17@gmail.com</a></p>
+                <p class="card-text">Cell: <a href="tel:650-863-5402">(650)863-5402</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div id="" class="video_overlays_left animate__animated animate__fadeIn animate_slower vertical-menu">
+  <div id="social" class="home video_overlays_left vertical-menu">
     <a href="https://www.instagram.com/smorr16/"><i class="fab fa-instagram"></i></a>
     <a href="https://www.twitch.tv/lol_64bit/about"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
         <path d="M11.64 5.93h1.43v4.28h-1.43m3.93-4.28H17v4.28h-1.43M7 2L3.43 5.57v12.86h4.28V22l3.58-3.57h2.85L20.57 12V2m-1.43 9.29l-2.85 2.85h-2.86l-2.5 2.5v-2.5H7.71V3.43h11.43z" fill="currentColor" />
@@ -243,7 +230,7 @@
     </a>
   </div>
 
-  <div id="" class="video_overlays_right animate__animated animate__fadeIn animate_slower vertical-menu text-wrapping">
+  <div id="nav" class="home video_overlays_right animate__animated animate__fadeIn animate_slower vertical-menu text-wrapping">
     <a href="#Home" onclick="toggleVisibility(this)">Home</a>
     <a href="#Education" onclick="toggleVisibility(this)">Education</a>
     <a href="#Projects" onclick="toggleVisibility(this)">Projects</a>
@@ -251,19 +238,28 @@
     <a href="#About" onclick="toggleVisibility(this)">About</i></a>
     <a href="#Contact" onclick="toggleVisibility(this)">Contact</i></a>
   </div>
-  <div class="footer">
+  <div id="footer" class="home footer">
     <p>Inspired by <a href="https://danielcaesar.com/"> Daniel Caesar</a> </p>
   </div>
+
+
+  <div id="start" class="center animate__animated animate__infinite animate__flash">
+    <h1 onclick="startSequence()"> Enter </h1>
+  </div>
+
+
 
 
   <!--<button id="myBtn" onclick="myFunction()"> Pause </button>-->
 
 
   <!--The video-->
-  <!--  <video autoplay muted loop webkit-playsinline playsinline id="myVideo">
-    <source src="./videos/video.mp4" type="video/mp4">
-  </video>-->
   <script type="text/javascript" src="./index.js"></script>
+  <div id="myVideo">
+    <video muted webkit-playsinline playsinline id="video">
+      <source src="./videos/start1.mp4" type="video/mp4">
+    </video>
+  </div>
 </body>
 
 </html>

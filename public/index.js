@@ -52,7 +52,7 @@ function toggleVisibility(item) {
     return
   }
   //toggles visibility and adds temporary animations for each transistion
-  if (document.getElementById(item.innerHTML).style.visibility === "visible") {
+  if (document.getElementById(item.innerHTML).style.visibility != null && document.getElementById(item.innerHTML).style.visibility === "visible") {
     document.getElementById(item.innerHTML).style.setProperty('--animate-duration', '0.5s');
     animateCSS('#' + item.innerHTML, 'fadeOut').then((message) => {
       document.getElementById(item.innerHTML).style.visibility = "hidden";
@@ -63,6 +63,30 @@ function toggleVisibility(item) {
     document.getElementById(item.innerHTML).style.setProperty('--animate-duration', '0.5s');
     animateCSS('#' + item.innerHTML, 'fadeIn');
   }
+}
+
+function startSequence() {
+  const startObjects = document.getElementsByClassName("home")
+  const startHeading = document.getElementById("start")
+
+  startHeading.classList.remove("animate__infinite")
+  animateCSS('#' + startHeading.id, 'fadeOut').then(() => {
+    startHeading.style.visibility = "hidden";
+    document.getElementById("myVideo").style.visibility = "visible";
+    document.getElementById("myVideo").style.setProperty("--animate-duration", "0.5s");
+    animateCSS("#myVideo", "fadeIn").then(() => {
+      document.getElementById("video").onended = () => {
+        for (var i = 0; i < startObjects.length; i++) {
+          document.getElementById(startObjects[i].id).style.visibility = "visible";
+          document.getElementById(startObjects[i].id).style.setProperty('--animate-duration', '2.0s');
+          animateCSS('#' + startObjects[i].id, 'fadeIn');
+          continue;
+        }
+      };
+      document.getElementById("video").play();
+    })
+
+  })
 }
 
 

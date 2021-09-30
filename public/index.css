@@ -5,36 +5,26 @@ html, body {
   overflow-y: hidden;
   scrollbar-width: none;
   height: fit-content;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+html {
+  background-color: #eaece9;
 }
 
 html::-webkit-scrollbar, body::-webkit-scrollbar {
   display: none;
 }
 
-@media screen and (max-width:768px) {
-  img {
-    width: 100%;
-  }
-
-  .container {
-    max-width: 100%;
-    width: 100%;
-  }
-
-  .col-md-3 {
-    width: 100%;
-    float: left;
-    margin: 0;
-  }
-}
-
 /* Style the video: 100% width and height to cover the entire window */
-#myVideo {
+#myVideo video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
   position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 /* Add some content at the bottom of the video/page */
@@ -58,7 +48,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   color: black;
 }
 
-#Education, #Projects, #Resume, #About, #Contact {
+.home, #myVideo, #Education, #Projects, #Resume, #About, #Contact {
   visibility: hidden;
 }
 
@@ -91,7 +81,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .footer {
-  position: fixed;
+  position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -137,6 +127,14 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 .group1 p, .group2 p {
   font-size: 15px;
   white-space: nowrap;
+}
+
+.center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
 }
 
 .text-wrapping a {
