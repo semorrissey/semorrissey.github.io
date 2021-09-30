@@ -1,5 +1,5 @@
 // Get the video
-var video = document.getElementById("myVideo");
+var video = document.getElementById("video");
 
 // Get the button
 var btn = document.getElementById("myBtn");
@@ -72,9 +72,9 @@ function startSequence() {
   startHeading.classList.remove("animate__infinite")
   animateCSS('#' + startHeading.id, 'fadeOut').then(() => {
     startHeading.style.visibility = "hidden";
-    document.getElementById("myVideo").style.visibility = "visible";
-    document.getElementById("myVideo").style.setProperty("--animate-duration", "0.5s");
-    animateCSS("#myVideo", "fadeIn").then(() => {
+    document.getElementById("video").style.visibility = "visible";
+    document.getElementById("video").style.setProperty("--animate-duration", "0.5s");
+    animateCSS("video", "fadeIn").then(() => {
       document.getElementById("video").onended = () => {
         for (var i = 0; i < startObjects.length; i++) {
           document.getElementById(startObjects[i].id).style.visibility = "visible";
