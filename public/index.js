@@ -78,7 +78,7 @@ function startSequence() {
       document.getElementById("video").onended = () => {
         for (var i = 0; i < startObjects.length; i++) {
           document.getElementById(startObjects[i].id).style.visibility = "visible";
-          document.getElementById(startObjects[i].id).style.setProperty('--animate-duration', '5.0s');
+          document.getElementById(startObjects[i].id).style.setProperty('--animate-duration', '3.0s');
           animateCSS('#' + startObjects[i].id, 'fadeIn');
           continue;
         }
